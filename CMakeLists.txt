@@ -257,10 +257,10 @@ else ()
 
     add_subdirectory("include")
 
-    if (CPPKAFKA_ENABLE_TESTS)
-        include(CTest)
-        add_subdirectory("tests")
-    endif()
+    #if (CPPKAFKA_ENABLE_TESTS)
+    #    include(CTest)
+    #    add_subdirectory("tests")
+    #endif()
 
     if (cppkafka_master_project)
         add_subdirectory("tools")
