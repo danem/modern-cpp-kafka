@@ -7,9 +7,9 @@ target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_LIST_DIR})
 #---------------------------
 # librdkafka
 #---------------------------
-target_include_directories(${PROJECT_NAME} SYSTEM INTERFACE ${LIBRDKAFKA_INCLUDE_DIR})
-target_link_directories(${PROJECT_NAME} INTERFACE ${LIBRDKAFKA_LIBRARY_DIR})
-target_link_libraries(${PROJECT_NAME} INTERFACE rdkafka)
+target_include_directories(${PROJECT_NAME} SYSTEM INTERFACE ${RDKAFKA_INCLUDE_DIR})
+target_link_directories(${PROJECT_NAME} INTERFACE ${RDKAFKA_LIBRARY_DIR})
+target_link_libraries(${PROJECT_NAME} INTERFACE RdKafka::rdkafka)
 
 #---------------------------
 # pthread
