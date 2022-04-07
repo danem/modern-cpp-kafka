@@ -25,16 +25,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED False)
 #---------------------------
 # Check librdkafka library
 #---------------------------
-if (DEFINED ENV{LIBRDKAFKA_ROOT})
-    set(LIBRDKAFKA_INCLUDE_DIR $ENV{LIBRDKAFKA_ROOT}/include)
-    set(LIBRDKAFKA_LIBRARY_DIR $ENV{LIBRDKAFKA_ROOT}/lib)
-else ()
-    set(LIBRDKAFKA_INCLUDE_DIR /usr/local/include)
-    set(LIBRDKAFKA_LIBRARY_DIR /usr/local/lib)
-endif ()
+find_package(RdKafka REQUIRED)
 
-message(STATUS "librdkafka include directory: ${LIBRDKAFKA_INCLUDE_DIR}")
-message(STATUS "librdkafka library directory: ${LIBRDKAFKA_LIBRARY_DIR}")
+
+message(STATUS "librdkafka include directory: ${RDKAFKA_INCLUDE_DIR}")
+message(STATUS "librdkafka library directory: ${RDKAFKA_LIBRARY_DIR}")
 
 
 #---------------------------
